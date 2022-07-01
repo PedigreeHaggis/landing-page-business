@@ -1,0 +1,361 @@
+/* universal selectors */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: "Ubuntu";
+}
+
+/* header section */
+
+header {
+  min-height: 4.3125rem;
+  width: 100%;
+  background-image: url("../Images/mission_background.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  color: white;
+  min-height: 100%;
+  padding: 1rem;
+  justify-content: space-around;
+  gap: 0.625rem;
+}
+
+.header-container h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.nav {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav li {
+  font-size: 1.375em;
+  padding-left: 3rem;
+  opacity: 0.8;
+}
+
+/* header section breakpoints */
+
+@media only screen and (max-width: 850px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav li {
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .header-container h1 {
+    align-self: center;
+    font-size: 2.5em;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav li {
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-container {
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+    font-size: 1.75em;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+/* mission section */
+
+.mission-container {
+  align-items: center;
+  justify-content: flex-end;
+  height: 43.75rem;
+}
+
+.mission-container .statement {
+  background: rgba(79, 189, 186, 0.5);
+  color: white;
+  text-align: center;
+  min-width: 50%;
+  min-height: 25%;
+  padding: 1.25em;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-container .statement h1 {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.mission-container .statement h3 {
+  padding-top: 0.75em;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .mission-container .statement {
+    width: 100%;
+  }
+
+  .mission-container .statement h1 {
+    display: none;
+  }
+
+  .mission-container .statement h3 {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+}
+
+/* games section */
+
+#expertise {
+  padding: 2rem;
+  background-image: url("../Images/hex-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#expertise h2 {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.expertise-container {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.expertise-container button {
+  width: 25rem;
+  height: 18rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(79, 189, 186, 0.9);
+  border-radius: 3%;
+  position: relative;
+}
+
+.expertise-container button:hover {
+  border-radius: 6%;
+  background-color: #35858b;
+  transition: 0.5s ease-in-out;
+}
+
+.expertise-container a {
+  box-shadow: -10px 10px 8px #35858b;
+  border-radius: 3%;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.expertise-container a:hover {
+  box-shadow: none;
+  border-radius: 10%;
+  transition: 0.5s ease-in-out;
+}
+
+.expertise-img {
+  width: 50%;
+}
+
+.expertise-caption {
+  font-size: 1.5em;
+  font-family: "Roboto";
+  color: white;
+  align-self: center;
+  position: absolute;
+  bottom: 3%;
+}
+
+button .m365,
+button .network-infrastructure {
+  width: 60%;
+}
+
+.expertise-container button:not(:hover),
+.expertise-container a:not(:hover) {
+  transition: 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 480px) {
+  #expertise h2 {
+    font-size: 2em;
+  }
+
+  .expertise-caption {
+    visibility: hidden;
+  }
+
+  .expertise-container button {
+    width: 18.75rem;
+  }
+}
+
+/* meet the team section */
+
+#team {
+  background-image: url("../images/team-bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 48rem;
+  width: 100%;
+
+  padding-top: 2em;
+}
+
+#team h2 {
+  background: rgba(79, 189, 186, 0.5);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  height: 4rem;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.team-container {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.team-member {
+  width: 32rem;
+  height: 31.25rem;
+  margin: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-img {
+  width: 60%;
+  height: 80%;
+  border: 4px solid white;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.team-caption {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+  background: rgba(79, 189, 186, 0.8);
+  border-radius: 5%;
+  padding: 0.75rem;
+  line-height: 1.2;
+}
+
+/* team media queries */
+
+@media only screen and (max-width: 550px) {
+  #team h2 {
+    font-size: 2em;
+  }
+}
+
+/* footer section */
+
+footer {
+  background: #35858b;
+  min-height: 18.75rem;
+  width: 100%;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  padding: 2.5rem;
+}
+.contact-container {
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-container h5 {
+  font-size: 1.5em;
+  color: #fff;
+  padding: 2.5rem;
+  line-height: 1.5;
+  width: 33.33%;
+}
+
+/* footer media queries */
+@media only screen and (max-width: 800px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-container h5 {
+    font-size: 1em;
+  }
+}
